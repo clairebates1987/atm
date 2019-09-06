@@ -1,0 +1,31 @@
+.enter-pin {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+
+  input {
+    margin: 10px 0;
+    text-align: center;
+    width: 50%;
+    height: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .keypad {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  button {
+    width: 50%;
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .invalid-pin {
+    color: red;
+  }
+}
