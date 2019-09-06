@@ -1,17 +1,32 @@
+import * as Actions from '../actions/constants';
+
 const defaultState = {
   loggedIn: false,
+  errorLoggingIn: '',
   balance: 0
 };
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case 'LOGIN':
-      console.log('login');
+    case Actions.LOGIN:
       return {
         ...state,
-        loggedIn: true
+        loggedIn: true,
+        errorLoggingIn: ''
+      };
+    case Actions.UPDATE_BALANCE:
+      return {
+        ...state,
+        balance: action.amount
+      };
+    case Actions.SET_LOGIN_FAILURE:
+      return {
+        ...state,
+        loggedIn: false,
+        errorLoggingIn: 'Invalid PIN. Please try again.'
       };
     default:
+      console.log(state);
       return state;
   }
 };

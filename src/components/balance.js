@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Balance = props => {
-  return <div>£200</div>;
+  return <div>{props.balance}</div>;
 };
 
 export default Balance;

@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import EnterPin from '../components/enter-pin';
-import { enterPin } from '../actions/userAction';
+import Balance from '../components/balance';
 
 const mapStateToProps = ({ user }) => {
   console.log(user);
@@ -9,13 +8,13 @@ const mapStateToProps = ({ user }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    enterPin: pin => {
+    /*enterPin: pin => {
       dispatch(enterPin(pin));
-    }
+    }*/
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(EnterPin);
+)(Balance);

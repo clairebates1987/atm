@@ -1,0 +1,19 @@
+body {
+  background-color: #282c34;
+  color: #ffffff;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+#root {
+  div:first-of-type {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+  }
+}
+
+.App {
+  flex-direction: column;
+}
