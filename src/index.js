@@ -7,8 +7,10 @@ import { ConnectedRouter } from 'connected-react-router';
 import configureStore, { history } from './store';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Options from './components/options';
+import RestrictedRoute from './containers/restricted-route';
+import Options from './containers/options';
 import Balance from './containers/balance';
+import Withdraw from './containers/withdraw';
 
 const store = configureStore();
 
@@ -17,8 +19,9 @@ ReactDOM.render(
     <ConnectedRouter history={history}>
       <Switch>
         <Route path='/' exact component={App} />
-        <Route path='/options' component={Options} />
-        <Route path='/balance' component={Balance} />
+        <RestrictedRoute path='/options' component={Options} redirectTo='/' />
+        <RestrictedRoute path='/balance' component={Balance} redirectTo='/' />
+        <RestrictedRoute path='/withdraw' component={Withdraw} redirectTo='/' />
       </Switch>
     </ConnectedRouter>
   </Provider>,

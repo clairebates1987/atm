@@ -5,7 +5,7 @@ body {
 }
 
 #root {
-  div:first-of-type {
+  > div:first-of-type {
     text-align: center;
     display: flex;
     justify-content: center;
