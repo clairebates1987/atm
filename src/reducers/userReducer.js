@@ -1,9 +1,10 @@
 import * as Actions from '../actions/constants';
 
 const defaultState = {
-  loggedIn: false,
+  loggedIn: true,
   errorLoggingIn: '',
-  balance: 0
+  balance: 0,
+  overdraftFacility: 100
 };
 
 export default (state = defaultState, action) => {
@@ -26,7 +27,6 @@ export default (state = defaultState, action) => {
         errorLoggingIn: 'Invalid PIN. Please try again.'
       };
     default:
-      console.log(state);
       return state;
   }
 };

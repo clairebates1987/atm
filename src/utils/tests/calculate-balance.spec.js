@@ -1,7 +1,6 @@
 import { calculateBalance } from '../calculate-balance';
 
 describe('Calculate balance function', () => {
-  console.log(calculateBalance);
   const testContext = {
     currentBalance: 220,
     withdrawalAmount: 140

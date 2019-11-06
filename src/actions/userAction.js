@@ -30,3 +30,9 @@ export const enterPin = pin => {
       });
   };
 };
+
+export const executeUpdateBalance = balance => {
+  return dispatch => {
+    dispatch(updateBalance(balance));
+  };
+};

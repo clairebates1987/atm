@@ -3,7 +3,6 @@ import EnterPin from '../components/enter-pin';
 import { enterPin } from '../actions/userAction';
 
 const mapStateToProps = ({ user }) => {
-  console.log(user);
   return user;
 };
 
